@@ -11,7 +11,9 @@ services:
       - KEYCLOAK_DATABASE_NAME=keycloak
       - KEYCLOAK_DATABASE_USER=keycloak
       - KEYCLOAK_DATABASE_PASSWORD=P@@8@X5gSN!dYka
-      - KEYCLOAK_EXTRA_ARGS="--hostname-url=https://ethan-keycloak.duckdns.org:10007"
+      - KEYCLOAK_EXTRA_ARGS=" --hostname-url=https://ethan-keycloak.duckdns.org:10007 "
+      - KC_HOSTNAME_URL=https://ethan-keycloak.duckdns.org:10007
+      - KC_PROXY=edge
     # ports:
     #   - 8007:8080
     restart: unless-stopped
