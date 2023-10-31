@@ -8,9 +8,9 @@ services:
       - KEYCLOAK_ADMIN_USER=${KEYCLOAK_ADMIN_USER}
       - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASS}
       - KEYCLOAK_DATABASE_HOST=ethan-keycloak-database
-      - KEYCLOAK_DATABASE_NAME=${POSTGRESQL_DB}
-      - KEYCLOAK_DATABASE_USER=${POSTGRESQL_USER}
-      - KEYCLOAK_DATABASE_PASSWORD=${POSTGRESQL_PASS}
+      - KEYCLOAK_DATABASE_NAME=keycloak
+      - KEYCLOAK_DATABASE_USER=keycloak
+      - KEYCLOAK_DATABASE_PASSWORD=P@@8@X5gSN!dYka
     # ports:
     #   - 8007:8080
     restart: unless-stopped
@@ -19,9 +19,9 @@ services:
     container_name: ethan-keycloak-database
     image: postgres
     environment:
-      - POSTGRES_USER=${POSTGRESQL_USER}
-      - POSTGRES_PASSWORD=${POSTGRESQL_PASS}
-      - POSTGRES_DB=${POSTGRESQL_DB}
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=P@@8@X5gSN!dYka
+      - POSTGRES_DB=keycloak
     volumes:
       - /home/ethan/data/keycloak_postgres:/var/lib/postgresql/data
     restart: unless-stopped
