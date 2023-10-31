@@ -1,4 +1,4 @@
-name: Update home server containers
+name: Update Keycloak
 env:
   DUCKDNSTOKEN: ${{ secrets.DUCKDNSTOKEN }}
   KEYCLOAK_ADMIN_USER: ${{ secrets.KEYCLOAK_ADMIN_USER }}
